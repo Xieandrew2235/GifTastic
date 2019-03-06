@@ -18,6 +18,16 @@ function buttonMaker() {
 };
 buttonMaker();
 
+function cardMaker() {
+    // Clears out previously generated elements with an empty string, (something Jerome mentioned in class)?
+    $("#athletes").empty();
+      // AJAX call based on parameters set above
+      $.ajax({
+          url: queryURL + $(this).attr("id") + "&api_key=" + apiKey + "&limit=" + searchQty,
+          method: "GET"
+        }).then(function (response) {
+          for (i= 1; i < searchQty; i++){ 
+
 // to-do list
 // create function to generate cards when athlete from array is clicked and/or if user inputs new athlete. also add in AJAX calls with parameters listed above
 // for loop + sources for still gifs and running gifs
