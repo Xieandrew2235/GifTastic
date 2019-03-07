@@ -1,5 +1,6 @@
 body {
     background-image: url("../images/background.jpg");
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #athletics-buttons{
@@ -11,4 +12,9 @@ body {
     color:orange;
     background: black;
     border: black
+}
+
+#img {
+    max-width: 50% !important;
+    max-height: 50% !important;
 }

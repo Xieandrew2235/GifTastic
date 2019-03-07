@@ -1,6 +1,6 @@
 // An array of athletes, which will be used to generate buttons dynamically.
 
-var peopleAthletic = ["LeBron James", "Ray Lewis", "Nolan Arenado", "Andrelton Simmons", "Kobe Bryant", "Buster Posey", "Bryce Harper", "Shaun White", "San Francisco Giants", "MLB", "NBA", "UFC"];
+var topics = ["LeBron James", "Ray Lewis", "Nolan Arenado", "Andrelton Simmons", "Kobe Bryant", "Buster Posey", "Bryce Harper", "Shaun White", "San Francisco Giants", "MLB", "NBA", "UFC"];
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=";
 var apiKey = "44EuboGZ4VXC2srzqR4cEZnqI0FD61th";
 var searchQty = 10;
@@ -8,11 +8,11 @@ var searchQty = 10;
 // Function to create button elements and display them on the top of the page.
 function buttonMaker() {
   $("#athletics-buttons").empty();
-  for (i = 0; i < peopleAthletic.length; i++) {
+  for (i = 0; i < topics.length; i++) {
     var emptyButton = $("<button>");
     $(emptyButton).addClass("btn btn-primary m-1 legends-button");
-    $(emptyButton).attr("id", peopleAthletic[i]);
-    $(emptyButton).html(peopleAthletic[i]);
+    $(emptyButton).attr("id", topics[i]);
+    $(emptyButton).html(topics[i]);
     $("#athletics-buttons").append(emptyButton);
   }
 };
@@ -73,7 +73,7 @@ function pausePlay() {
 function addAthlete() {
   event.preventDefault();
   var newName = $("#user-input").val();
-  peopleAthletic.push(newName);
+  topics.push(newName);
   $("#user-input").val("");
   buttonMaker();
 };
