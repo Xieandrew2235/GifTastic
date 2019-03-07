@@ -4,7 +4,7 @@ body {
 }
 
 #athletics-buttons{
-    background-color: black;
+    margin-top: 25px;
     color: orange;
 }
 
@@ -17,4 +17,10 @@ body {
 #img {
     max-width: 50% !important;
     max-height: 50% !important;
+}
+
+.btn-primary {
+    background-color: black;
+    color: orange;
+    border-color: transparent
 }
