@@ -6,6 +6,7 @@ body {
 #athletics-buttons{
     margin-top: 25px;
     color: orange;
+    text-align: center;
 }
 
 #athletes {
@@ -23,4 +24,9 @@ body {
     background-color: black;
     color: orange;
     border-color: transparent
+}
+
+label {
+    font-size: large;
+    margin-left: 39px;
 }
