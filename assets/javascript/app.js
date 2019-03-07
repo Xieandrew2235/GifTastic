@@ -28,7 +28,7 @@ function cardMaker() {
   }).then(function (response) {
     for (i = 1; i < searchQty; i++) {
       // Adding card and image in
-      var newCard = $("<div class='card mt-5 mx-4 float-left'>")
+      var newCard = $("<div class='card mt-5 mx-5 float-left'>")
       var newImage = $("<img class='card-img-top img-thumbnail'>");
 
       // Setting variables for the URLs for playing and paused GIFs
