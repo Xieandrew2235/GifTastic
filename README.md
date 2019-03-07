@@ -1,6 +1,6 @@
 # 06- Ajax Homework: GifTastic Assignment 
 
-##Link to assignment: https://xieandrew2235.github.io/GifTastic/
+* Link to assignment: https://xieandrew2235.github.io/GifTastic/
 
 ![Screenshot](assets/images/screenshot.png)
 
