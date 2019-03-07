@@ -1,6 +1,6 @@
 // An array of athletes, which will be used to generate buttons dynamically.
 
-var peopleAthletic = ["lebron james", "ray lewis", "nolan arenado", "andrelton simmons", "kobe bryant", "buster posey"];
+var peopleAthletic = ["LeBron James", "Ray Lewis", "Nolan Arenado", "Andrelton Simmons", "Kobe Bryant", "Buster Posey", "Bryce Harper", "Shaun White", "San Francisco Giants", "MLB", "NBA", "UFC"];
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=";
 var apiKey = "44EuboGZ4VXC2srzqR4cEZnqI0FD61th";
 var searchQty = 10;
@@ -29,7 +29,7 @@ function cardMaker() {
     for (i = 1; i < searchQty; i++) {
       var newCard = $("<div class='card mt-4 mx-2 float-left'>")
       var newImage = $("<img class='card-img-top img-thumbnail'>");
-      
+
       // Setting variables for the URLs for playing and paused GIFs
       var stillImage = response.data[i - 1].images.downsized_still.url;
       var motionImage = response.data[i - 1].images.downsized.url;

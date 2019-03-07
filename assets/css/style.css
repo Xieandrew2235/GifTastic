@@ -1,3 +1,14 @@
 body {
     background-image: url("../images/background.jpg");
 }
+
+#athletics-buttons{
+    background-color: black;
+    color: orange;
+}
+
+#athletes {
+    color:orange;
+    background: black;
+    border: black
+}
