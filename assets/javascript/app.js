@@ -27,7 +27,8 @@ function cardMaker() {
     method: "GET"
   }).then(function (response) {
     for (i = 1; i < searchQty; i++) {
-      var newCard = $("<div class='card mt-4 mx-2 float-left'>")
+      // Adding card and image in
+      var newCard = $("<div class='card mt-5 mx-4 float-left'>")
       var newImage = $("<img class='card-img-top img-thumbnail'>");
 
       // Setting variables for the URLs for playing and paused GIFs
@@ -46,11 +47,10 @@ function cardMaker() {
       // Created variables for newCardBody and newCardText
       var newCardBody = $("<div class='card-body'>");
       var newCardText = $("<p class='card-text'>");
-
+      // Rating is displayed for each GIF, image and text is appended for each new GIF
       newCardText.html("Rating: " + response.data[i - 1].rating);
       newCardBody.append(newCardText);
       newCard.append(newImage).append(newCardBody);
-      // ID athletes appended into newCard
       $("#athletes").append(newCard);
     }
   });
