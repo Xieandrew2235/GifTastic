@@ -29,22 +29,25 @@ function cardMaker() {
     for (i = 1; i < searchQty; i++) {
       var newCard = $("<div class='card mt-4 mx-2 float-left'>")
       var newImage = $("<img class='card-img-top img-thumbnail'>");
+      
       // Setting variables for the URLs for playing and paused GIFs
       var stillImage = response.data[i - 1].images.downsized_still.url;
       var motionImage = response.data[i - 1].images.downsized.url;
 
       // Setting "alt" to whatever is provided from GIPHY for the title
       $(newImage).attr("alt", response.data[i - 1].title);
+
       // Setting the default source for the paused image
       $(newImage).attr("src", stillImage);
       $(newImage.attr("img-still", stillImage));
       $(newImage.attr("img-motion", motionImage));
       $(newImage).attr("current-state", "img-still");
+
       // Created variables for newCardBody and newCardText
       var newCardBody = $("<div class='card-body'>");
       var newCardText = $("<p class='card-text'>");
-      newCardText.html("Rating: " + response.data[i - 1].rating);
 
+      newCardText.html("Rating: " + response.data[i - 1].rating);
       newCardBody.append(newCardText);
       newCard.append(newImage).append(newCardBody);
       // ID athletes appended into newCard
@@ -66,9 +69,6 @@ function pausePlay() {
   }
 };
 
-// to-do list
-// create function to generate cards when athlete from array is clicked and/or if user inputs new athlete. also add in AJAX calls with parameters listed above
-// for loop + sources for still gifs and running gifs
 // Function add athlete defines var newName, which takes the value of #user-input. Forgot about event.preventDefault but Maxwell and Mel suggested of it, which prevents the page from refreshing and not adding the input text (I think?).
 function addAthlete() {
   event.preventDefault();
@@ -77,6 +77,7 @@ function addAthlete() {
   $("#user-input").val("");
   buttonMaker();
 };
+
 // GIFs kind of laggy... slow to pop up and dont run smoothly on click
 
 // Event Listeners
